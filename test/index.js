@@ -132,3 +132,20 @@ test('uint / int data types', function (t) {
 
   t.end();
 });
+
+test('glslx block', function (t) {
+  t.deepEqual(tokenizeString('uint x = ${value};'), [
+    {type: "keyword", data: "uint", position: 0, line: 1, column: 4},
+    {type: "whitespace", data: " ", position: 4, line: 1, column: 5},
+    {type: "ident", data: "x", position: 5, line: 1, column: 6},
+    {type: "whitespace", data: " ", position: 6, line: 1, column: 7},
+    {type: "operator", data: "=", position: 7, line: 1, column: 8},
+    {type: "whitespace", data: " ", position: 8, line: 1, column: 9},
+    {type: "operator",data: "${",position: 9,line: 1,column: 11  },
+    {type: "ident", data: "value", position: 11, line: 1, column: 16},
+    {type: "operator",data: "}",position: 16,line: 1,column: 17  },
+    {type: "operator", data: ";", position: 17, line: 1, column: 17},
+    {type: "eof", data: "(eof)", position: 17, line: 1, column: 18}
+  ]);
+  t.end();
+});
