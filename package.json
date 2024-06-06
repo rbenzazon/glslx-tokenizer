@@ -9,19 +9,21 @@
   "authors": [
     "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
     "Mikola Lysenko <mikolalysenko@gmail.com> (http://0fps.net)",
-    "Chris Dickinson <chris@neversaw.us> (http://neversaw.us)"
+    "Chris Dickinson <chris@neversaw.us> (http://neversaw.us)",
+    "Raphaël Benzazon <raphael.benzazon@gmail.com>"
   ],
   "scripts": {
     "test": "node test/index.js | tap-spec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gl-modules/glsl-tokenizer.git"
+    "url": "git@github.com:rbenzazon/glslx-tokenizer.git"
   },
   "keywords": [
     "glsl",
     "tokenizer",
-    "stream"
+    "stream",
+    "glslx"
   ],
   "author": "Chris Dickinson <chris@neversaw.us>",
   "license": "MIT",
