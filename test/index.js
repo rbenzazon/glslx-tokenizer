@@ -149,3 +149,15 @@ test('glslx block', function (t) {
   ]);
   t.end();
 });
+
+test('glslx include', function (t) {
+  t.deepEqual(tokenizeString('${include common}'), [
+    {type: "operator", data: "${", position: 0, line: 1, column: 2},
+    {type: "keyword", data: "include", position: 2, line: 1, column: 9},
+    {type: "whitespace", data: " ", position: 9, line: 1, column: 10},
+    {type: "ident", data: "common", position: 10, line: 1, column: 16},
+    {type: "operator", data: "}", position: 16, line: 1, column: 17},
+    {type: "eof", data: "(eof)", position: 16, line: 1, column: 17}
+  ]);
+  t.end();
+});
